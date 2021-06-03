@@ -1,0 +1,6 @@
+*.old
+include
+lib
+bin
+*.swp
+*.o

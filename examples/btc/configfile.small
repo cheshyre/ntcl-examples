@@ -1,0 +1,3 @@
+dims_filename = dims_small_simple.dat
+contraction = t(a,i):f(a,e)*t(e,i)
+

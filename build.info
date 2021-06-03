@@ -1,0 +1,9 @@
+modules = timed_app btc_mod
+applications = example1 btc timed_btc
+use_blas:dependencies = blas
+use_magma:dependencies = magma cublas cuda blas
+use_cublas:dependencies = cublas cuda
+use_cutensor:dependencies = cutensor cuda
+use_cuda:dependencies = cuda
+use_hip:dependencies = hip
+uses = ntcl-algorithms ntcl-tensor ntcl-data ntcl-util

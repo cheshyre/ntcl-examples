@@ -1,0 +1,6 @@
+number_of_iterations = 2
+number_of_warmup_steps = 1
+dims_filename = dims_small_hard.dat
+dump_config = yes
+contraction = C(a,b,i,j) : A(k,b,c,j)*B(a,c,i,k)
+!metrics = read_bandwidth,flop_rate,mm_time

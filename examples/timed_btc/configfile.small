@@ -1,0 +1,6 @@
+number_of_iterations = 2
+number_of_warmup_steps = 1
+dims_filename = dims_small_simple.dat
+contraction = t(a,i):f(a,e)*t(e,i)
+!metrics = read_bandwidth,flop_rate,mm_time
+
