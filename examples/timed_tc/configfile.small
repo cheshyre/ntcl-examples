@@ -1,0 +1,6 @@
+number_of_iterations = 2
+number_of_warmup_steps = 1
+contraction = t(a,i):f(a,e)*t(e,i)
+dims = 600 600 800
+!metrics = read_bandwidth,flop_rate,mm_time
+datatype = real64

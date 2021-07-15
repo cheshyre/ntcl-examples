@@ -1,0 +1,6 @@
+contraction_driver = buffered_ttgt
+memory_type = device
+buffered_ttgt-mm_driver = cublas
+buffered_ttgt-permute_driver = cuda_async
+# 100MB scratch buffer. Default is 10MB
+scratch_buffer-size=100000000

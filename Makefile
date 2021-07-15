@@ -5,8 +5,8 @@ MAKEINC := ${NTCL_ROOT}/ntcl-build/makefile_fragments
 
 include ${MAKEINC}/standard_preample.mk
 
-modules      += timed_app btc_mod
-modules      += example1 btc timed_btc
+modules      += timed_app btc_mod tc_mod permute_mod mm_mod
+modules      += example1 timed_tc btc timed_btc easy_tc tensor_data_usage tc_usage timed_permute timed_mm
 
 test_modules += 
 
@@ -39,9 +39,21 @@ ifdef use_cuda
 external_libraries += -L${CUDA_ROOT}/lib64 -lcudart -lcuda -lstdc++
 endif
 
+ifdef use_rocblas
+ifeq (${HIP_PLATFORM},amd)
+external_include += -I${ROCM_PATH}/rocblas/include
+external_libraries += -L${ROCM_PATH}/rocblas/lib -lrocblas -ldl -L${HIP_PATH}/lib -lamdhip64 -lstdc++
+endif
+
+ifeq (${HIP_PLATFORM},nvidia)
+external_include += -I${ROCM_PATH}/rocblas/include
+external_libraries += -L${ROCM_PATH}/rocblas/lib -lrocblas -ldl -L${CUDA_ROOT}/lib64 -lcudart -lcuda -lstdc++
+endif
+endif
+
 ifdef use_hip
 ifeq (${HIP_PLATFORM},amd)
-external_libraries += -L${HIP_PATH}/lib -lamdhip64
+external_libraries += -L${HIP_PATH}/lib -lamdhip64 -lstdc++
 endif
 
 ifeq (${HIP_PLATFORM},nvidia)

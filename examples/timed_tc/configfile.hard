@@ -1,0 +1,7 @@
+number_of_iterations = 2
+number_of_warmup_steps = 1
+dump_config = yes
+contraction = C(a,b,i,j) : A(k,b,c,j)*B(a,c,i,k)
+dims = 120 12 14 16 70 18
+!metrics = read_bandwidth,flop_rate,mm_time
+datatype = real64

@@ -1,0 +1,6 @@
+contraction_driver = buffered_ttgt
+memory_type = host
+buffered_ttgt-mm_driver = blas
+buffered_ttgt-permute_driver = loops
+# 1GB scratch buffer. Default is 10MB
+scratch_buffer-size=1000000000

@@ -1,0 +1,7 @@
+contraction_driver = buffered_ttgt
+memory_type = device
+buffered_ttgt-mm_driver = rocblas
+buffered_ttgt-permute_driver = hip_async
+# 1GB scratch buffer. Default is 10MB
+scratch_buffer-size=1000000000
+

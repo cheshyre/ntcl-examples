@@ -1,0 +1,17 @@
+# Memory type
+memory_type = host
+
+# Matrix multiplication drivers
+mm_driver = blas
+bmm_driver = simple_loops
+
+# Permute drivers
+permute_driver = loops
+btp_driver = simple_loops
+
+# Tensor contraction drivers
+contraction_driver = buffered_ttgt
+btc_driver = simple_loops
+
+# Scratch buffer - 100 MB, default is 10 MB
+scratch_buffer_size = 100000000

@@ -128,6 +128,8 @@ contains
     subroutine read_commandline(this)
         class(timed_app_entry), intent(inout) :: this
 
+        this%config = application_config()
+
         call this%config%read_commandline()
     end subroutine read_commandline
 
