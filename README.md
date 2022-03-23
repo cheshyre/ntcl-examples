@@ -1,4 +1,7 @@
-NTCL examples repository
+# NTCL examples repository
+
+> This is a fork of the [official NTCL repository](https://gitlab.com/ntcl/ntcl) being used for development of a C interface.
+
 
 Create NTCL_ROOT environment variable: `export NTCL_ROOT=path-to-ntcl-dev-root-directory`
 
